@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meus Contatos</title>
+
+    <style>
+
+        #Titulo {
+            background-color: blue;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="Titulo">
+        
+        <h1>Meus Contatos</h1>
+
+    </div>
+
+    <div id="resumo">
+        
+        <h2 style="text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; padding: 10px;">Entre em contato comigo!</h2>
+        
+        <p style="font-size: medium;"><strong>Se você quiser entrar em contato comigo, preencha o formulário abaixo com seus dados e sua mensagem, que eu irei responder assim que possível, obrigado pela atenção!</strong></p>
+    </div>
+
+    <div id="formulario">
+        
+            <label for="nome">Nome: </label>
+            <input type="text" id="nome" name="nome">
+        <br><br>
+            <label for="email">Email: </label>
+            <input type="email" id="email" name="email">
+        <br><br>
+            <label for="mensagem">Mensagem: </label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+        <br><br>
+            <input type="submit" value="Enviar">
+
+    </div>
+
+    <div id="Mais">
+        <ul>
+        
+            <li><a href="sobreMim.html"><strong> sobre Mim</strong></a></li>
+            <li><a href="formacao.html"><strong>Formação</strong></a></li>
+            <li><a href="portifolio.html"><strong>Portfólio</strong></a></li>
+            <li><a href="PáginaInicial.html"><strong>Voltar para a pagina inicial</strong></a></li>
+        </ul>
+    </div>
+
+<script>
+   
+//aqui vou adicionar um script para retornar uma mebnsagem ao clicar no botão enviar, simulando o envio de um email
+
+   var nome = document.getElementById("nome");
+    var email = document.getElementById("email");
+    var mensagem = document.getElementById("mensagem");
+
+    var botaoEnviar = document.querySelector("input[type='submit']");
+
+    botaoEnviar.addEventListener("click", function(event) {
+        event.preventDefault(); // Impede o envio do formulário
+
+        // Aqui você pode adicionar a lógica para enviar os dados do formulário para um servidor ou processá-los de alguma forma
+
+        alert("Obrigado, " + nome.value + "! Sua mensagem foi enviada com sucesso.");
+
+
+        // codigo para limpar os campos
+
+    nome.value = "";
+    email.value = "";
+    mensagem.value = "";
+    });
+   
+</script>
+</body>
+</html>
